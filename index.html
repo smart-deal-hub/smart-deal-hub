@@ -1,93 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#111827">
-<meta name="description" content="Smart Deal Hub — discover useful products and compare deals from Amazon and Flipkart.">
 <title>Smart Deal Hub | Smart Shopping Starts Here</title>
 <style>
-:root{--bg:#f4f7fb;--ink:#172033;--muted:#64748b;--card:#fff;--line:#e5eaf2;--blue:#2563eb;--orange:#f59e0b;--dark:#111827}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
-a{color:inherit}.topbar{background:var(--dark);color:#fff;font-size:.82rem;text-align:center;padding:9px 14px}.wrap{width:min(1120px,92%);margin:auto}
-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:15px 0}.brand{display:flex;align-items:center;gap:10px;font-weight:850;font-size:1.16rem;text-decoration:none;letter-spacing:-.4px}.logo{display:grid;place-items:center;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;width:39px;height:39px;border-radius:12px;font-size:1.15rem}.navlinks{display:flex;gap:20px;align-items:center}.navlinks a{text-decoration:none;font-weight:650;font-size:.93rem}.navlinks a:hover{color:var(--blue)}.menu{display:none;background:#eef2ff;border:0;border-radius:9px;padding:9px 12px;font-size:1rem}
-.hero{padding:62px 0 50px;background:radial-gradient(ellipse at 85% 20%,#dbeafe 0,transparent 42%),linear-gradient(135deg,#fff,#f2f5ff)}.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:#e0eaff;color:#1d4ed8;border-radius:999px;padding:7px 12px;font-size:.8rem;font-weight:800}.hero h1{font-size:clamp(2.35rem,5vw,4.2rem);line-height:1.04;letter-spacing:-2px;margin:18px 0}.hero h1 span{color:var(--blue)}.hero p{font-size:1.08rem;color:var(--muted);max-width:610px;line-height:1.7}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:25px}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:12px;padding:13px 18px;text-decoration:none;font-weight:800;cursor:pointer}.btn-primary{background:var(--blue);color:white}.btn-light{background:#fff;border:1px solid var(--line);color:var(--ink)}.hero-art{background:linear-gradient(145deg,#172554,#2563eb);border-radius:28px;min-height:300px;padding:26px;color:#fff;box-shadow:0 24px 55px #1e40af25;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.hero-art:after{content:"";position:absolute;width:230px;height:230px;border:35px solid #ffffff16;border-radius:50%;right:-50px;top:-55px}.art-label{font-size:.8rem;text-transform:uppercase;letter-spacing:2px;color:#bfdbfe;font-weight:800}.deal-emoji{font-size:5.3rem;text-align:center;filter:drop-shadow(0 15px 12px #0003)}.art-bottom{display:flex;justify-content:space-between;align-items:end;position:relative;z-index:1}.art-bottom strong{font-size:1.4rem}.art-bottom small{color:#dbeafe}
-section{padding:48px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:22px}.section-head h2{margin:0;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-.8px}.section-head p{margin:7px 0 0;color:var(--muted)}.searchrow{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 24px}.search{flex:1;min-width:180px;padding:13px 15px;border:1px solid var(--line);border-radius:12px;font:inherit;background:white}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;padding:10px 14px;border-radius:999px;font-weight:750;cursor:pointer}.filter.active{background:#172554;color:#fff;border-color:#172554}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.product{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:17px;display:flex;flex-direction:column;min-width:0;transition:transform .2s,box-shadow .2s}.product:hover{transform:translateY(-3px);box-shadow:0 15px 30px #0f172a0d}.product-visual{height:145px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#f5f3ff);display:grid;place-items:center;font-size:4rem;margin-bottom:15px}.tag{font-size:.73rem;font-weight:850;color:#1d4ed8;background:#eff6ff;padding:5px 9px;border-radius:999px;align-self:flex-start}.product h3{margin:12px 0 7px;font-size:1.07rem}.product p{margin:0 0 14px;color:var(--muted);font-size:.91rem;line-height:1.55;flex:1}.merchant-links{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}.merchant-links a{display:block;text-align:center;text-decoration:none;padding:10px 8px;border-radius:10px;font-size:.83rem;font-weight:850}.amazon{background:#fff4df;color:#8a4b00;border:1px solid #ffe0a3}.flipkart{background:#eaf2ff;color:#1746a2;border:1px solid #cfe0ff}.edit-note{margin-top:10px;font-size:.76rem;color:#64748b}.empty{grid-column:1/-1;background:white;border:1px dashed #cbd5e1;border-radius:16px;padding:28px;text-align:center;color:var(--muted)}
-.how{background:#fff}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{border:1px solid var(--line);border-radius:17px;padding:22px;background:#fbfcff}.step-num{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:#dbeafe;color:#1d4ed8;font-weight:900}.step h3{margin:15px 0 8px}.step p{color:var(--muted);line-height:1.6;margin:0}.disclosure{border:1px solid #f5d28a;background:#fffbeb;color:#854d0e;border-radius:14px;padding:16px;line-height:1.6;font-size:.9rem}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}.about-grid p{color:var(--muted);line-height:1.75}.footer{background:#111827;color:#e5e7eb;padding:30px 0}.footer-inner{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer small{color:#9ca3af}.footer a{color:#bfdbfe}
-@media(max-width:760px){.hero{padding:40px 0}.hero-grid{grid-template-columns:1fr}.hero-art{min-height:230px}.deal-emoji{font-size:4rem}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.navlinks{display:none;position:absolute;left:0;right:0;top:69px;background:#fff;padding:18px 4%;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.section-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:440px){.grid{grid-template-columns:1fr}.product-visual{height:125px}.hero h1{letter-spacing:-1.2px}.merchant-links a{font-size:.8rem}.brand{font-size:1.02rem}}
+:root{--bg:#f4f7fb;--ink:#172033;--card:#fff;--line:#e5eaf2;--blue:#2563eb;}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,sans-serif;background:var(--bg);color:var(--ink)}
+.header{background:#fff;border-bottom:1px solid var(--line);padding:15px;text-align:center;}
+.hero{padding:40px 20px;text-align:center;}
+.hero h1{font-size:2rem;margin-bottom:10px;color:var(--ink);}
+.container{max-width:1000px;margin:0 auto;padding:20px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:20px;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:15px;text-align:center;}
+.card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:12px;}
+.card h3{font-size:1.1rem;margin:10px 0;}
+.card p{font-size:0.9rem;color:#555;margin-bottom:15px;}
+.btn{background:var(--blue);color:#fff;padding:8px 16px;text-decoration:none;border-radius:6px;display:inline-block;font-weight:bold;}
 </style>
 </head>
 <body>
-<div class="topbar">🛍️ Smart picks. Smarter shopping. Always compare before you buy.</div>
-<header><div class="wrap nav">
-<a class="brand" href="#"><span class="logo">S</span><span>Smart Deal Hub</span></a>
-<nav class="navlinks" id="navlinks"><a href="#deals">Explore products</a><a href="#how">How it works</a><a href="#about">About</a></nav>
-<button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
-</div></header>
-<main>
-<section class="hero"><div class="wrap hero-grid">
-<div><span class="eyebrow">✨ YOUR EVERYDAY DEAL FINDER</span>
-<h1>Find your next<br><span>smart buy.</span></h1>
-<p>Explore useful products across tech, home, fashion and more. Compare retailer listings and choose what works for your budget.</p>
-<div class="actions"><a class="btn btn-primary" href="#deals">Explore products <span>→</span></a><a class="btn btn-light" href="#how">How it works</a></div>
+
+<div class="header">
+  <h2>Smart Deal Hub</h2>
 </div>
-<div class="hero-art"><div class="art-label">Smart Deal Hub picks</div><div class="deal-emoji">🛍️</div><div class="art-bottom"><div><strong>Good finds.</strong><br><small>One easy place to start.</small></div><span style="font-size:2rem">✦</span></div></div>
-</div></section>
-<section id="deals"><div class="wrap">
-<div class="section-head"><div><h2>Explore popular categories</h2><p>Starter examples — add your approved affiliate links before publishing.</p></div></div>
-<div class="searchrow"><input class="search" id="search" type="search" placeholder="Search products or categories…" aria-label="Search products"><div class="filters" id="filters">
-<button class="filter active" data-category="All">All</button><button class="filter" data-category="Electronics">Electronics</button><button class="filter" data-category="Home">Home</button><button class="filter" data-category="Fashion">Fashion</button><button class="filter" data-category="Beauty">Beauty</button><button class="filter" data-category="Lifestyle">Lifestyle</button>
-</div></div>
-<div class="grid" id="productGrid"></div>
-<p class="edit-note">Note: These are sample categories and product ideas, not live prices or verified offers.</p>
-</div></section>
-<section class="how" id="how"><div class="wrap">
-<div class="section-head"><div><h2>How it works</h2><p>A simple way to help visitors discover products.</p></div></div>
-<div class="steps">
-<div class="step"><div class="step-num">1</div><h3>Discover</h3><p>Visitors browse product ideas and search categories on Smart Deal Hub.</p></div>
-<div class="step"><div class="step-num">2</div><h3>Compare</h3><p>They open the retailer links to check current price, availability, delivery and reviews.</p></div>
-<div class="step"><div class="step-num">3</div><h3>Earn eligible commission</h3><p>If your affiliate account is approved and a qualifying purchase is made through your tracked link, you may earn commission under the program rules.</p></div>
-</div></div></section>
-<section id="about"><div class="wrap about-grid">
-<div><h2>About Smart Deal Hub</h2><p>We help shoppers explore everyday product ideas in one clean, mobile-friendly place. Always check the seller, product details, return policy and final price on the retailer's own website before buying.</p></div>
-<div class="disclosure"><strong>Affiliate disclosure</strong><br>Some retailer links on this website may be affiliate links. If you buy through an eligible link, Smart Deal Hub may earn a commission at no extra cost to you. We will label affiliate links clearly and only use links from programs we are approved to join.</div>
-</div></section>
-</main>
-<footer class="footer"><div class="wrap footer-inner"><div><strong>Smart Deal Hub</strong><br><small>Shop smart. Choose confidently.</small></div><small>© <span id="year"></span> Smart Deal Hub · Product details and prices may change.</small></div></footer>
+
+<div class="hero">
+  <h1>Find your next smart buy.</h1>
+  <p>Explore top products, compare deals, and choose what works for your budget.</p>
+</div>
+
+<div class="container">
+  <div class="grid" id="productGrid">
+    <!-- Products yahan automatically show honge -->
+  </div>
+</div>
+
 <script>
+// Yahan aap apne products ki photo, naam aur link badal sakte hain
 const products = [
- {name:"Wireless Earbuds",cat:"Electronics",emoji:"🎧",desc:"Explore everyday audio picks for music, calls and travel."},
- {name:"Smartphone Accessories",cat:"Electronics",emoji:"📱",desc:"Cases, chargers and useful accessories for your phone."},
- {name:"Smartwatch & Fitness Bands",cat:"Electronics",emoji:"⌚",desc:"Compare wearable devices and their features."},
- {name:"Laptop & Desk Essentials",cat:"Electronics",emoji:"💻",desc:"Helpful gear for study, work and productivity."},
- {name:"Kitchen Essentials",cat:"Home",emoji:"🍳",desc:"Discover handy tools for everyday cooking."},
- {name:"Home Organisation",cat:"Home",emoji:"🪴",desc:"Storage and organisation ideas for your space."},
- {name:"Lighting & Decor",cat:"Home",emoji:"💡",desc:"Small touches to make your room feel your own."},
- {name:"Everyday Fashion",cat:"Fashion",emoji:"👕",desc:"Browse wardrobe basics and everyday accessories."},
- {name:"Bags & Backpacks",cat:"Fashion",emoji:"🎒",desc:"Options for commuting, college and travel."},
- {name:"Skincare Basics",cat:"Beauty",emoji:"🧴",desc:"Compare personal-care products and listed ingredients."},
- {name:"Fitness Essentials",cat:"Lifestyle",emoji:"🏃",desc:"Useful everyday items for an active routine."},
- {name:"Travel Accessories",cat:"Lifestyle",emoji:"🧳",desc:"Small travel helpers for your next trip."}
+  {
+    name: "Wireless Bluetooth Earbuds",
+    image: "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500",
+    desc: "High bass wireless earbuds with long battery life.",
+    link: "https://www.amazon.in"
+  },
+  {
+    name: "Smart Fitness Watch",
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500",
+    desc: "Track your fitness, heart rate, and daily steps easily.",
+    link: "https://www.flipkart.com"
+  },
+  {
+    name: "Classic Casual Backpack",
+    image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500",
+    desc: "Durable and stylish backpack suitable for daily use.",
+    link: "https://www.amazon.in"
+  }
 ];
-let active = "All";
+
 const grid = document.getElementById("productGrid");
-function safeLink(url){return /^https:\/\/(www\.)?(amazon\.in|flipkart\.com)\//i.test(url.trim()) ? url.trim() : "#";}
-function render(){
- const q = document.getElementById("search").value.toLowerCase().trim();
- const filtered = products.filter(p=>(active==="All"||p.cat===active)&&(p.name+" "+p.cat+" "+p.desc).toLowerCase().includes(q));
- grid.innerHTML = "";
- if(!filtered.length){grid.innerHTML='<div class="empty">No matching products. Try another search.</div>';return;}
- filtered.forEach((p)=>{
-   const card=document.createElement("article");card.className="product";
-   card.innerHTML=`<div class="product-visual" aria-hidden="true">${p.emoji}</div><span class="tag">${p.cat}</span><h3>${p.name}</h3><p>${p.desc}</p><div class="merchant-links"><a class="amazon" href="#" data-merchant="amazon" data-product="${p.name}">Amazon ↗</a><a class="flipkart" href="#" data-merchant="flipkart" data-product="${p.name}">Flipkart ↗</a></div><div class="edit-note">Add your affiliate URL to activate these buttons.</div>`;
-   grid.appendChild(card);
- });
-}
-document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;active=b.dataset.category;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render();});
-document.getElementById("search").addEventListener("input",render);
-document.getElementById("menuBtn").addEventListener("click",()=>document.getElementById("navlinks").classList.toggle("open"));
-document.getElementById("year").textContent=new Date().getFullYear();
-render();
+products.forEach(p => {
+  grid.innerHTML += `
+    <div class="card">
+      <img src="${p.image}" alt="${p.name}">
+      <h3>${p.name}</h3>
+      <p>${p.desc}</p>
+      <a href="${p.link}" target="_blank" class="btn">View Deal</a>
+    </div>
+  `;
+});
 </script>
-</body></html>
+
+</body>
+</html>
+
